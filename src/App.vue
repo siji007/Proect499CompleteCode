@@ -2,6 +2,9 @@
   <div id="app">
     
     
+    <div id="showRoute">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -23,5 +26,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: 8FE58E; */
 }
 </style>
