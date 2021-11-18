@@ -187,17 +187,6 @@
                     <input type="radio" required name="response19" id="a"> <span class="ml-2">Agree</span><br>
                     <input type="radio" required name="response19" id="a"> <span class="ml-2">Strong Agree</span><br>
                 </div>
-
-                <div class="mt-4 pb-8">
-                    <!-- <router-link to="/section_1" tag="button"> -->
-                    <button type="button" @click="show" class="btn btn-light">Back</button>
-                    <!-- </router-link> -->
-
-                    <!-- <router-link to="/success_page" tag="button"> -->
-                        <button class="btn ml-4" @click="check" style="background-color:#8FE58E;">Submit</button>
-                    <!-- </router-link> -->
-                </div>
-
             <!-- </form> -->
         </div>
     </div>
