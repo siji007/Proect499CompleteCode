@@ -1,10 +1,12 @@
 import Home from './components/Home'
 import FirstQuestionaire from './components/FirstQuestionaire'
-import SecondQuestionaire from '@/components/SecondQuestionaire'
+import SuccessPage from '@/components/SuccessPage'
+
 
 export const routes = [
     {path:'/',component:Home},
     {path: '/section_1', component:FirstQuestionaire},
-    {path: '/section_2', component:SecondQuestionaire}
+    {path:'/success_page', SuccessPage}
+    
 ];
 
