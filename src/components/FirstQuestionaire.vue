@@ -66,7 +66,7 @@
 import SecondQuestionaire from '@/components/SecondQuestionaire'
 export default {
     components:{
-        SecondQuestionaire.
+        SecondQuestionaire
     },
     
 
