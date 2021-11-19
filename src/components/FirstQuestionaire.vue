@@ -32,7 +32,7 @@
             <span class="ml-2">Less than 12</span><br />
             <input type="radio" required name="age" id="b1214" />
             <span class="ml-2">12 - 14 years</span><br />
-            <input type="radio" required name="age" id="b1214" />
+            <input type="radio" required name="age" id="m14" />
             <span class="ml-2">More than 14 years</span>
           </div>
 
@@ -83,12 +83,12 @@
             >
             <br />
             <input type="radio" required name="method" id="television" />
-            <span class="ml-2">Television</span><br />
-            <input type="radio" required name="method" id="ss2" />
+            <span  class="ml-2">Television</span><br />
+            <input type="radio" required name="method" id="mobilePhone" />
             <span class="ml-2">Mobile phone</span><br />
-            <input type="radio" required name="method" id="ss2" />
+            <input type="radio" required name="method" id="computer" />
             <span class="ml-2">Computer</span><br />
-            <input type="radio" required name="method" id="ss2" />
+            <input type="radio" required name="method" id="videoGame" />
             <span class="ml-2">Video game</span><br />
           </div>
         </div>
@@ -97,7 +97,7 @@
           <SecondQuestionaire />
         </div>
 
-        <div class="mt-4">
+        <div class="mt-4 mb-4">
           <button
             type="submit"
             class="btn"
@@ -117,7 +117,7 @@
             Back
           </button>
 
-          <button
+          <button v-show="submitButton"
             class="btn ml-4"
             style="background-color: #8fe58e"
           >
@@ -139,8 +139,24 @@ export default {
     return {
       showSecond: false,
       showFirst: true,
+      submitButton: false,
+
+    //   accessInfoMethod:{
+    //     Television:{
+    //     id:'television',
+    //     accessName:'Television'
+    //     },
+    //     MobilePhone:{
+    //         id:'mobilePhone',
+    //         accessName:'Mobile Phone'
+    //     }
+    //   }
+      
+    //   ['Televeision', 'Mobile phone','Computer', 'Video game']
+
     };
   },
+  validations:{},
   methods: {
     submit() {
       console.log("Pass");
@@ -148,12 +164,8 @@ export default {
     display() {
       this.showSecond = !this.showSecond;
       this.showFirst = !this.showFirst;
+      this.submitButton = !this.submitButton;
     },
-    // check(){
-    //     if(show == false){
-    //         return !show
-    //     }
-    // }
   },
 };
 </script>
