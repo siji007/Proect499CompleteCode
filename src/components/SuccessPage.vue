@@ -1,16 +1,16 @@
 <template>
     <div>
         <!-- <img :src="SvgSuccessContent" alt=""/> -->
-        <SvgSuccessContent/>
+        <h1>Successful</h1>
     </div>
 </template>
 
 
 <script>
-import SvgSuccessContent from '@/components/svg4content.svg'
+// import SvgSuccessContent from '@/components/svg4content.svg'
 export default {
-    components:{
-        SvgSuccessContent,
-    },
+    // components:{
+    //     SvgSuccessContent,
+    // },
 }
 </script>

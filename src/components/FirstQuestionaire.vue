@@ -172,12 +172,15 @@
             Back
           </button>
 
+        <router-link to="/success_page">
           <button v-show="submitButton"
             class="btn ml-4"
             style="background-color: #8fe58e"
           >
             Submit
           </button>
+          </router-link>
+          
         </div>
       </form>
     </div>
