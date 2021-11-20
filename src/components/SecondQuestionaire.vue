@@ -25,7 +25,7 @@
                 <div>Strongly Agree</div>
             </div>
         </div> -->
-        
+
         <div class=" mt-4">
             <!-- <form action="" @submit.prevent="submit"> -->
                 <div class="form-group p-4 rounded-lg" style="background-color:#8FE58E;">
@@ -182,7 +182,7 @@
                 </div>
 
                 <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                    <label for="" class="text-large font-bold">Are motivated to read physical books than reading from electronic devices.</label> <br>
+                    <label for="" class="text-large font-bold">Are motivated to read physical books than reading from electronic devices.</label><br>
                     <input type="radio" required name="response19" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
                     <input type="radio" required name="response19" id="d"> <span class="ml-2">Disagree</span><br>
                     <input type="radio" required name="response19" id="a"> <span class="ml-2">Agree</span><br>

@@ -33,7 +33,7 @@
                 <li v-for="age in Ages" :key="age">
                     <label>
                         <input v-model="ageError"  @input="$v.ageError.$touch()" name="age" max="1" class="" type="radio"  v-bind:value="age.id" v-bind:id="age.id">
-                        <span class="ml-2">{{ age.name }}</span>
+                        <span class="ml-2">{{ age.title }}</span>
                     </label>
                 </li>
                 <p class="text-danger" v-if="!$v.ageError.required">Please select a option</p>
@@ -60,7 +60,7 @@
                 <li v-for="gender in Genders" :key="gender">
                     <label v-bind:for="gender.id">
                         <input v-model="genderError"  @input="$v.genderError.$touch()" name="gender" class="" type="radio"  v-bind:value="gender.id" v-bind:id="gender.id">
-                        <span class="ml-2">{{ gender.name }}</span>
+                        <span class="ml-2">{{ gender.title }}</span>
                     </label>
                 </li>
                 <p class="text-danger" v-if="!$v.genderError.required">Please select a option</p>
@@ -82,11 +82,11 @@
                 <li v-for="classes in seniorClass" :key="classes">
                     <label v-bind:for="classes.id">
                         <input v-model="classError" @input="$v.classError.$touch()" class="" name="class" type="radio" v-bind:value="classes.id" v-bind:id="classes.id">
-                        <span class="ml-2">{{ classes.name }}</span>
+                        <span class="ml-2">{{ classes.title }}</span>
                     </label>
                 </li>
-                <p class="text-danger" v-if="!$v.classError.required">Please select a option</p>
             </ul>
+            <p class="text-danger" v-if="!$v.classError.required">Please select a option</p>
             <!-- <label for="" class="text-large font-bold">Class</label> <br />
             <input type="radio" required name="class" id="ss1" />
             <span class="ml-2">SS1</span><br />
@@ -108,7 +108,7 @@
                     <div class="input" :class="{invalid: $v.accessItYnError.$error}">
                     <label v-bind:for="access.id">
                         <input v-model="accessItYnError" @input="$v.accessItYnError.$touch()" class="" name="access" type="radio" v-bind:value="access.id" v-bind:id="access.id">
-                        <span class="ml-2">{{ access.name }}</span>
+                        <span class="ml-2">{{ access.title }}</span>
                         
                     </label>
                     </div>
@@ -150,7 +150,7 @@
                 <li v-for="device in devices" :key="device">
                     <label v-bind:for="device.id">
                         <input class=""  type="checkbox" v-model="device.checked" v-bind:value="device.id" v-bind:id="device.id">
-                        <span class="ml-2">{{ device.name }}</span>
+                        <span class="ml-2">{{ device.title }}</span>
                     </label>
                     
                 </li>
@@ -217,69 +217,69 @@ export default {
       Ages:[
         {
             "id": "l12",
-            "name": "Less than 12"
+            "title": "Less than 12"
         },
         {
         "id":"b1214",
-        "name": "12 - 14 years"
+        "title": "12 - 14 years"
         },
         {
         "id": "m14",
-        "name": "More than 14 years"
+        "title": "More than 14 years"
         }
       ],
       Genders:[
         {
             "id": "male",
-            "name": "Male"
+            "title": "Male"
         },
         {
             "id": "female",
-            "name": "Female"
+            "title": "Female"
         },
       ],
       accessIt:[
         {   "id":"yes",
-            "name": "Yes"
+            "title": "Yes"
         },
         {   "id":"no",
-            "name": "No"
+            "title": "No"
         },
       ],
       seniorClass:[
         {
             "id" : "ss1",
-            "name": "SS1"
+            "title": "SS1"
         },
         {
             "id" : "ss2",
-            "name": "SS2"
+            "title": "SS2"
         },
         {
             "id" : "ss3",
-            "name": "SS3"
+            "title": "SS3"
         },
       ],
       devices:[
           
         {
         "id": "computer",
-        "name":"Computer",
+        "title":"Computer",
         "checked":true
         },
         {
         "id": "television",
-        "name":"Television",
+        "title":"Television",
         "checked":false
         },
         {
         "id": "mobilePhone",
-        "name":"Mobile Phone",
+        "title":"Mobile Phone",
         "checked":false
         },
         {
         "id": "videoGame",
-        "name":"Video Game",
+        "title":"Video Game",
         "checked":false
         },
           
