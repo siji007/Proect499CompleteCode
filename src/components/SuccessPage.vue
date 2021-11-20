@@ -12,11 +12,5 @@ export default {
     components:{
         SvgSuccessContent,
     },
-    // data(){
-    //     return{
-    //         SvgSuccessContent
-    //     }
-    // }
-
 }
 </script>
