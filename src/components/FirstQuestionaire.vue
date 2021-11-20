@@ -274,11 +274,6 @@ export default {
     submit() {
       console.log("Pass");
     },
-    checkRadio(){
-        if(this.Genders.length() > 1){
-            alert('Error has occured')
-        }
-    },
     display() {
       this.showSecond = !this.showSecond;
       this.showFirst = !this.showFirst;
