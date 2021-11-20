@@ -32,10 +32,11 @@
                 <p class="font-bold mb-2">Age</p>
                 <li v-for="age in Ages" :key="age">
                     <label>
-                        <input name="age" max="1" class="" type="radio"  v-bind:value="age.id" v-bind:id="age.id">
+                        <input v-model="ageError"  @input="$v.ageError.$touch()" name="age" max="1" class="" type="radio"  v-bind:value="age.id" v-bind:id="age.id">
                         <span class="ml-2">{{ age.name }}</span>
                     </label>
                 </li>
+                <p class="text-danger" v-if="!$v.ageError.required">Please select a option</p>
             </ul>
 
             <!-- <label for="" class="text-large font-bold">Age</label> <br />
@@ -58,10 +59,11 @@
                 <p class="font-bold mb-2">Gender</p>
                 <li v-for="gender in Genders" :key="gender">
                     <label v-bind:for="gender.id">
-                        <input name="gender" class="" type="radio"  v-bind:value="gender.id" v-bind:id="gender.id">
+                        <input v-model="genderError"  @input="$v.genderError.$touch()" name="gender" class="" type="radio"  v-bind:value="gender.id" v-bind:id="gender.id">
                         <span class="ml-2">{{ gender.name }}</span>
                     </label>
                 </li>
+                <p class="text-danger" v-if="!$v.genderError.required">Please select a option</p>
             </ul>
             <!-- <label for="" class="text-large font-bold">Gender</label> <br />
             <input type="radio" required name="gender" id="male" />
@@ -79,10 +81,11 @@
                 <p class="font-bold mb-2">Class</p>
                 <li v-for="classes in seniorClass" :key="classes">
                     <label v-bind:for="classes.id">
-                        <input class="" name="class" type="radio" v-bind:value="classes.id" v-bind:id="classes.id">
+                        <input v-model="classError" @input="$v.classError.$touch()" class="" name="class" type="radio" v-bind:value="classes.id" v-bind:id="classes.id">
                         <span class="ml-2">{{ classes.name }}</span>
                     </label>
                 </li>
+                <p class="text-danger" v-if="!$v.classError.required">Please select a option</p>
             </ul>
             <!-- <label for="" class="text-large font-bold">Class</label> <br />
             <input type="radio" required name="class" id="ss1" />
@@ -102,11 +105,16 @@
             <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">Do you have access to information technology?</p>
                 <li v-for="access in accessIt" :key="access">
+                    <div class="input" :class="{invalid: $v.accessItYnError.$error}">
                     <label v-bind:for="access.id">
-                        <input class="" name="access" type="radio" v-bind:value="access.id" v-bind:id="access.id">
+                        <input v-model="accessItYnError" @input="$v.accessItYnError.$touch()" class="" name="access" type="radio" v-bind:value="access.id" v-bind:id="access.id">
                         <span class="ml-2">{{ access.name }}</span>
+                        
                     </label>
+                    </div>
+                    
                 </li>
+                <p class="text-danger" v-if="!$v.accessItYnError.required">Please select a option</p>
             </ul>
 
             <!-- <label for="" class="text-large font-bold"
@@ -141,9 +149,10 @@
                 <p class="font-bold mb-2">If Yes, what method accessing information technology?</p>
                 <li v-for="device in devices" :key="device">
                     <label v-bind:for="device.id">
-                        <input class="" type="checkbox" v-model="device.checked" v-bind:value="device.id" v-bind:id="device.id">
+                        <input class=""  type="checkbox" v-model="device.checked" v-bind:value="device.id" v-bind:id="device.id">
                         <span class="ml-2">{{ device.name }}</span>
                     </label>
+                    
                 </li>
             </ul>
           </div>
@@ -156,6 +165,7 @@
         <div class="mt-4 mb-4">
           <button
             type="submit"
+            :disabled="$v.$invalid"
             class="btn"
             @click="display"
             v-show="showFirst"
@@ -189,7 +199,7 @@
 </template>
 
 <script>
-// import {required} from 'vuelidate/lib/validators'
+import {required} from 'vuelidate/lib/validators'
 import SecondQuestionaire from "@/components/SecondQuestionaire";
 export default {
   components: {
@@ -197,12 +207,16 @@ export default {
   },
   data() {
     return {
+      accessItYnError:'',
+      ageError:'',
+      genderError:'',
+      classError:'',  
       showSecond: false,
       showFirst: true,
       submitButton: false,
       Ages:[
         {
-            "id":"l12",
+            "id": "l12",
             "name": "Less than 12"
         },
         {
@@ -210,7 +224,7 @@ export default {
         "name": "12 - 14 years"
         },
         {
-        "id":"m14",
+        "id": "m14",
         "name": "More than 14 years"
         }
       ],
@@ -273,7 +287,21 @@ export default {
 
     };
   },
-  validations:{},
+  validations:{
+    
+    accessItYnError:{
+        required:required
+    },
+    ageError:{
+        required:required
+    },
+    genderError:{
+        required:required
+    },
+    classError:{
+        required: required
+    }
+  },
   methods: {
     submit() {
       console.log("Pass");
@@ -290,4 +318,10 @@ export default {
 #divf {
   background-color: #8fe58e;
 }
+/* .input.invalid label {
+    color: red;
+} */
+/* .input.invalid input {
+    border: 1px solid red;
+} */
 </style>
