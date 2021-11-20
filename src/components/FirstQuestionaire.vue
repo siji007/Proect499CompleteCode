@@ -28,23 +28,23 @@
             style="background-color: #8fe58e"
           >
 
-            <!-- <ul class="-ml-8" style="list-style-type: none; " >
+            <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">Age</p>
                 <li v-for="age in Ages" :key="age">
                     <label>
-                        <input max="1" class="" type="radio"  v-bind:value="age.id" v-bind:id="age.id">
+                        <input name="age" max="1" class="" type="radio"  v-bind:value="age.id" v-bind:id="age.id">
                         <span class="ml-2">{{ age.name }}</span>
                     </label>
                 </li>
-            </ul> -->
+            </ul>
 
-            <label for="" class="text-large font-bold">Age</label> <br />
+            <!-- <label for="" class="text-large font-bold">Age</label> <br />
             <input type="radio" required name="age" id="l12" />
             <span class="ml-2">Less than 12</span><br />
             <input type="radio" required name="age" id="b1214" />
             <span class="ml-2">12 - 14 years</span><br />
             <input type="radio" required name="age" id="m14" />
-            <span class="ml-2">More than 14 years</span>
+            <span class="ml-2">More than 14 years</span> -->
 
 
           </div>
@@ -54,42 +54,43 @@
             style="background-color: #8fe58e"
           >
 
-            <!-- <ul class="-ml-8" style="list-style-type: none; " >
+            <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">Gender</p>
                 <li v-for="gender in Genders" :key="gender">
                     <label v-bind:for="gender.id">
-                        <input @mouseleave="checkRadio"  class="" type="radio"  v-bind:value="gender.id" v-bind:id="gender.id">
+                        <input name="gender" class="" type="radio"  v-bind:value="gender.id" v-bind:id="gender.id">
                         <span class="ml-2">{{ gender.name }}</span>
                     </label>
                 </li>
-            </ul> -->
-            <label for="" class="text-large font-bold">Gender</label> <br />
+            </ul>
+            <!-- <label for="" class="text-large font-bold">Gender</label> <br />
             <input type="radio" required name="gender" id="male" />
             <span class="ml-2">Male</span><br />
             <input type="radio" required name="gender" id="female" />
-            <span class="ml-2">Female</span><br />
+            <span class="ml-2">Female</span><br /> -->
+
           </div>
 
           <div
             class="form-group mt-4 p-4 rounded-lg"
             style="background-color: #8fe58e"
           >
-            <!-- <ul class="-ml-8" style="list-style-type: none; " >
+            <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">Class</p>
                 <li v-for="classes in seniorClass" :key="classes">
                     <label v-bind:for="classes.id">
-                        <input class="" type="radio" v-bind:value="classes.id" v-bind:id="classes.id">
+                        <input class="" name="class" type="radio" v-bind:value="classes.id" v-bind:id="classes.id">
                         <span class="ml-2">{{ classes.name }}</span>
                     </label>
                 </li>
-            </ul> -->
-            <label for="" class="text-large font-bold">Class</label> <br />
+            </ul>
+            <!-- <label for="" class="text-large font-bold">Class</label> <br />
             <input type="radio" required name="class" id="ss1" />
             <span class="ml-2">SS1</span><br />
             <input type="radio" required name="class" id="ss2" />
             <span class="ml-2">SS2</span><br />
             <input type="radio" required name="class" id="ss3" />
-            <span class="ml-2">SS3</span><br />
+            <span class="ml-2">SS3</span><br /> -->
 
           </div>
 
@@ -98,24 +99,24 @@
             style="background-color: #8fe58e"
           >
 
-            <!-- <ul class="-ml-8" style="list-style-type: none; " >
+            <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">Do you have access to information technology?</p>
                 <li v-for="access in accessIt" :key="access">
                     <label v-bind:for="access.id">
-                        <input class="" type="radio" v-bind:value="access.id" v-bind:id="access.id">
+                        <input class="" name="access" type="radio" v-bind:value="access.id" v-bind:id="access.id">
                         <span class="ml-2">{{ access.name }}</span>
                     </label>
                 </li>
-            </ul> -->
+            </ul>
 
-            <label for="" class="text-large font-bold"
+            <!-- <label for="" class="text-large font-bold"
               >Do you have access to information technology?</label
             >
             <br />
             <input type="radio" required name="access" id="yes" />
             <span class="ml-2">Yes</span><br />
             <input type="radio" required name="access" id="no" />
-            <span class="ml-2">No</span><br />
+            <span class="ml-2">No</span><br /> -->
           </div>
 
           <div
@@ -180,7 +181,7 @@
             Submit
           </button>
           </router-link>
-          
+
         </div>
       </form>
     </div>
