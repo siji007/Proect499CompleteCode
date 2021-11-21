@@ -6,7 +6,7 @@ import SuccessPage from '@/components/SuccessPage'
 export const routes = [
     {path:'/',component:Home},
     {path: '/questions', component:FirstQuestionaire},
-    {path:'/success_page', SuccessPage}
+    {path:'/success_page', component:SuccessPage}
     
 ];
 

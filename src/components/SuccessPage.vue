@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="container">
         <!-- <img :src="SvgSuccessContent" alt=""/> -->
-        <h1>Successful</h1>
+        <h1 class="text-success">Successful</h1>
     </div>
 </template>
 
