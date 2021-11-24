@@ -22,12 +22,30 @@
               confidentiality.
             </p>
           </div>
+          <div
+            class="form-group p-4 rounded-lg"
+            style="background-color: #8fe58e"
+          >
+            <ul class="-ml-8" style="list-style-type: none; " >
+                <p class="font-bold mb-2">Input email address</p>
+                <li >
+                    <label>
+                        <input
+                        style="border:none;" 
+                        v-model="email"  @blur="$v.email.$touch()" name=""  class="rounded-full p-2 border-success" type="email" >
+                        <!-- <span class="ml-2"></span> -->
+                        <p class="p-1 text-danger font-serif" v-if="!$v.email.email"><i class=""></i>Please enter a valid email</p>
+                        <p class="p-1 text-danger font-serif" v-if="!$v.email.required"><i class=""></i>Email is required</p>
+                    </label>
+                </li>
+                
+            </ul>
+          </div>
 
           <div
             class="form-group p-4 rounded-lg"
             style="background-color: #8fe58e"
           >
-
             <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">Age</p>
                 <li v-for="age in Ages" :key="age">
@@ -36,7 +54,7 @@
                         <span class="ml-2">{{ age.title }}</span>
                     </label>
                 </li>
-                <p class="text-danger" v-if="!$v.ageError.required">Please select a option</p>
+                <p class="text-danger font-serif" v-if="!$v.ageError.required">Please select a option</p>
             </ul>
 
             <!-- <label for="" class="text-large font-bold">Age</label> <br />
@@ -47,14 +65,12 @@
             <input type="radio" required name="age" id="m14" />
             <span class="ml-2">More than 14 years</span> -->
 
-
           </div>
 
           <div
             class="form-group mt-4 p-4 rounded-lg"
             style="background-color: #8fe58e"
           >
-
             <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">Gender</p>
                 <li v-for="gender in Genders" :key="gender">
@@ -63,7 +79,7 @@
                         <span class="ml-2">{{ gender.title }}</span>
                     </label>
                 </li>
-                <p class="text-danger" v-if="!$v.genderError.required">Please select a option</p>
+                <p class="text-danger font-serif" v-if="!$v.genderError.required">Please select a option</p>
             </ul>
             <!-- <label for="" class="text-large font-bold">Gender</label> <br />
             <input type="radio" required name="gender" id="male" />
@@ -72,7 +88,6 @@
             <span class="ml-2">Female</span><br /> -->
 
           </div>
-
           <div
             class="form-group mt-4 p-4 rounded-lg"
             style="background-color: #8fe58e"
@@ -86,7 +101,7 @@
                     </label>
                 </li>
             </ul>
-            <p class="text-danger" v-if="!$v.classError.required">Please select a option</p>
+            <p class="text-danger font-serif" v-if="!$v.classError.required">Please select a option</p>
             <!-- <label for="" class="text-large font-bold">Class</label> <br />
             <input type="radio" required name="class" id="ss1" />
             <span class="ml-2">SS1</span><br />
@@ -109,12 +124,10 @@
                     <label v-bind:for="access.id">
                         <input v-model="accessItYnError" @input="$v.accessItYnError.$touch()" class="" name="access" type="radio" v-bind:value="access.id" v-bind:id="access.id">
                         <span class="ml-2">{{ access.title }}</span>
-                        
                     </label>
                     </div>
-                    
                 </li>
-                <p class="text-danger" v-if="!$v.accessItYnError.required">Please select a option</p>
+                <p class="text-danger font-serif" v-if="!$v.accessItYnError.required">Please select a option</p>
             </ul>
 
             <!-- <label for="" class="text-large font-bold"
@@ -144,7 +157,6 @@
             <span class="ml-2">Computer</span><br />
             <input type="radio" required name="method" id="videoGame" />
             <span class="ml-2">Video game</span><br /> -->
-
             <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">If Yes, what method accessing information technology?</p>
                 <li v-for="device in devices" :key="device">
@@ -152,7 +164,6 @@
                         <input class=""  type="checkbox" v-model="device.checked" v-bind:value="device.id" v-bind:id="device.id">
                         <span class="ml-2">{{ device.title }}</span>
                     </label>
-                    
                 </li>
             </ul>
           </div>
@@ -164,7 +175,8 @@
 
         <div class="mt-4 mb-4">
           <button
-            type="submit"
+            id="next"
+            
             :disabled="$v.$invalid"
             class="btn"
             @click="display"
@@ -186,8 +198,9 @@
         <router-link to="/success_page">
           <button v-show="submitButton"
             class="btn ml-4"
+            id="submitt"
             type="submit"
-            :disabled="$v.$invalid"
+            :disabled="!$v.$invalid"
             style="background-color: #8fe58e"
             
           >

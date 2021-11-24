@@ -2,6 +2,7 @@ import {required} from 'vuelidate/lib/validators'
 export const secondQuestions = {
     data(){
         return{
+            attendPhysicalClassError:'',
             readPhysicalBooksError:'',
             ReadPhysicalBooks:[
                 {
@@ -20,7 +21,27 @@ export const secondQuestions = {
                     "id": "ae",
                     "title": "Agree"
                 },
-            ]
+            ],
+            AttendPhysicalClass:[
+                {
+                    "id": "sd",
+                    "title": "Strongly Disagree"
+                },
+                {
+                    "id": "de",
+                    "title": "Disagree"
+                },
+                {
+                    "id": "ae",
+                    "title": "Agree"
+                },
+                {
+                    "id": "ae",
+                    "title": "Agree"
+                },
+            ],
+
+            
         }
     },
     validations:{
@@ -28,6 +49,9 @@ export const secondQuestions = {
     readPhysicalBooksError:{
         required:required
     },
+    attendPhysicalClassError:{
+        required: required
+    }
     
   },
     methods:{

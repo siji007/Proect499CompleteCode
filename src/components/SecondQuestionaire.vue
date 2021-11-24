@@ -27,7 +27,6 @@
         </div> -->
 
         <div class=" mt-4">
-            
                 <div class="form-group p-4 rounded-lg" style="background-color:#8FE58E;">
                     <label for="" class="text-large font-bold">Get distracted in class when they bring their phones to class</label> <br>
                     <input type="radio" required name="response1" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
@@ -174,13 +173,25 @@
                 </div>
 
                 <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                    <label for="" class="text-large font-bold">Are more serious in attending physical classes than online classes.</label> <br>
+                    <ul class="-ml-8" style="list-style-type: none; " >
+                        <p class="font-bold mb-2">Are more serious in attending physical classes than online classes.</p>
+                        <li v-for="attend in AttendPhysicalClass" :key="attend">
+                            <div class="input" :class="{invalid: $v.attendPhysicalClassError.$error}">
+                            <label v-bind:for="attend.id">
+                                <input v-model="attendPhysicalClassError" @input="$v.attendPhysicalClassError.$touch()" class="" name="response18" type="radio" v-bind:value="attend.id" v-bind:id="attend.id">
+                                <span class="ml-2">{{ attend.title }}</span>
+                            </label>
+                            </div>
+                        </li>
+                        <p class="text-danger" v-if="!$v.attendPhysicalClassError.required">Please select a option</p>
+                    </ul>
+                    
+                    <!-- <label for="" class="text-large font-bold">Are more serious in attending physical classes than online classes.</label> <br>
                     <input type="radio" required name="response18" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
                     <input type="radio" required name="response18" id="d"> <span class="ml-2">Disagree</span><br>
                     <input type="radio" required name="response18" id="a"> <span class="ml-2">Agree</span><br>
-                    <input type="radio" required name="response18" id="a"> <span class="ml-2">Strong Agree</span><br>
+                    <input type="radio" required name="response18" id="a"> <span class="ml-2">Strong Agree</span><br> -->
                 </div>
-
                 <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                     <ul class="-ml-8" style="list-style-type: none; " >
                         <p class="font-bold mb-2">Are you motivated to read physical books than reading from electronic devices.</p>
@@ -189,10 +200,8 @@
                             <label v-bind:for="read.id">
                                 <input v-model="readPhysicalBooksError" @input="$v.readPhysicalBooksError.$touch()" class="" name="response19" type="radio" v-bind:value="read.id" v-bind:id="read.id">
                                 <span class="ml-2">{{ read.title }}</span>
-                                
                             </label>
                             </div>
-                            
                         </li>
                         <p class="text-danger" v-if="!$v.readPhysicalBooksError.required">Please select a option</p>
                     </ul>

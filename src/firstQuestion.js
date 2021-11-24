@@ -1,4 +1,4 @@
-import {required} from 'vuelidate/lib/validators'
+import {required, email} from 'vuelidate/lib/validators'
 export const firstQuestionMixin = {
     data() {
         return {
@@ -6,13 +6,14 @@ export const firstQuestionMixin = {
           ageError:'',
           genderError:'',
           classError:'',  
+          email: null,
           showSecond: false,
           showFirst: true,
           submitButton: false,
           Ages:[
             {
-                "id": "l12",
-                "title": "Less than 12"
+              "id": "l12",
+              "title": "Less than 12"
             },
             {
             "id":"b1214",
@@ -83,18 +84,20 @@ export const firstQuestionMixin = {
         };
       },
       validations:{
-        
+        email: {
+          required,email
+        },
         accessItYnError:{
-            required:required
+          required:required
         },
         ageError:{
-            required:required
+          required:required
         },
         genderError:{
-            required:required
+          required:required
         },
         classError:{
-            required: required
+          required: required
         }
       },
       methods: {
