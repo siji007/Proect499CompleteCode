@@ -119,7 +119,7 @@
 
             <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">Do you have access to information technology?</p>
-                <li v-for="access in accessIt" :key="access">
+                <li v-for="access in AccessIt" :key="access">
                     <div class="input" :class="{invalid: $v.accessItYnError.$error}">
                     <label v-bind:for="access.id">
                         <input v-model="accessItYnError" @input="$v.accessItYnError.$touch()" class="" name="access" type="radio" v-bind:value="access.id" v-bind:id="access.id">
@@ -129,7 +129,6 @@
                 </li>
                 <p class="text-danger font-serif" v-if="!$v.accessItYnError.required">Please select a option</p>
             </ul>
-
             <!-- <label for="" class="text-large font-bold"
               >Do you have access to information technology?</label
             >
@@ -139,7 +138,6 @@
             <input type="radio" required name="access" id="no" />
             <span class="ml-2">No</span><br /> -->
           </div>
-
           <div
             id="divf"
             class="form-group mt-4 p-4 rounded-lg pb-8"
@@ -161,8 +159,8 @@
                 <p class="font-bold mb-2">If Yes, what method accessing information technology?</p>
                 <li v-for="device in devices" :key="device">
                     <label v-bind:for="device.id">
-                        <input class=""  type="checkbox" v-model="device.checked" v-bind:value="device.id" v-bind:id="device.id">
-                        <span class="ml-2">{{ device.title }}</span>
+                      <input class=""  type="checkbox" v-model="device.checked" v-bind:value="device.id" v-bind:id="device.id">
+                      <span class="ml-2">{{ device.title }}</span>
                     </label>
                 </li>
             </ul>
@@ -176,7 +174,6 @@
         <div class="mt-4 mb-4">
           <button
             id="next"
-            
             :disabled="$v.$invalid"
             class="btn"
             @click="display"
@@ -221,7 +218,7 @@ import SecondQuestionaire from "@/components/SecondQuestionaire";
 export default {
     mixins: [firstQuestionMixin],
     components: {
-        SecondQuestionaire,
+      SecondQuestionaire,
     }
   
 };

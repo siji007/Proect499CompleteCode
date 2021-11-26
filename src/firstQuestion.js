@@ -34,7 +34,7 @@ export const firstQuestionMixin = {
                 "title": "Female"
             },
           ],
-          accessIt:[
+          AccessIt:[
             {   "id":"yes",
                 "title": "Yes"
             },

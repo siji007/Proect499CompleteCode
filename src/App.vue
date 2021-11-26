@@ -28,4 +28,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* background-color: 8FE58E; */
 }
+/* body{
+  background-color: rgba(8, 2, 43, 0.927);
+} */
 </style>
