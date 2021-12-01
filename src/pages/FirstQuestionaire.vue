@@ -197,7 +197,7 @@
             class="btn ml-4"
             id="submitt"
             type="submit"
-            :disabled="!$v.$invalid"
+            :disabled="$v.$invalid"
             style="background-color: #8fe58e"
             
           >
@@ -214,7 +214,7 @@
 <script>
 import {firstQuestionMixin} from '../firstQuestion'
 // import {required} from 'vuelidate/lib/validators'
-import SecondQuestionaire from "@/components/SecondQuestionaire";
+import SecondQuestionaire from "@/pages/SecondQuestionaire";
 export default {
     mixins: [firstQuestionMixin],
     components: {

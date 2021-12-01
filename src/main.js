@@ -15,6 +15,9 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import {routes} from './route'
 import VueRouter from 'vue-router'
+
+// import './css/style.scss'
+
 Vue.use(VueRouter)
 Vue.use(Vuelidate)
 Vue.config.productionTip = false

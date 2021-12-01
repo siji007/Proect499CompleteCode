@@ -1,8 +1,8 @@
-import Home from './components/Home'
-import FirstQuestionaire from './components/FirstQuestionaire'
-import SuccessPage from '@/components/SuccessPage'
-import Login from '@/components/Login'
-import Dashboard from '@/components/Dashboard'
+import Home from './pages/Home'
+import FirstQuestionaire from './pages/FirstQuestionaire'
+import SuccessPage from '@/pages/SuccessPage'
+import Login from '@/pages/Login'
+import Dashboard from '@/pages/Dashboard'
 export const routes = [
     {path:'/',component:Home},
     {path: '/questions', component:FirstQuestionaire},
