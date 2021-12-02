@@ -1,143 +1,156 @@
 <template>
-  <div class="flex h-screen overflow-hidden">
-
-    <!-- Sidebar -->
-    <Sidebar :sidebarOpen="sidebarOpen" @close-sidebar="sidebarOpen = false" />
-
-    <!-- Content area -->
-    <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+  <div id="app">
       
-      <!-- Site header -->
-      <Header :sidebarOpen="sidebarOpen" @toggle-sidebar="sidebarOpen = !sidebarOpen" />
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
 
-      <main>
-        <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
+      <div class="sidebar pr-3">
+        <header class="mt-12 text-center font-bold">Project 499</header>
+        <ul>
+          <li class="">
+            <a href="">Dashboard</a>
+          </li>
+          <router-link to="/dashboard/responses" tag="li">
+            <a href="">Responses</a>
+          </router-link>
+          <li><a href="">Messages</a></li>
+          <li><a href="">Reports</a></li>
+        </ul>
+      </div>
 
-          <!-- Welcome banner -->
-          <WelcomeBanner />
+      <section class="pr-5">
+        <!-- <div class="" style="">
+          <input id="textInput" type="text" class="w-50 rounded py-1 bg-grey border border-info">
+
+          <div class="float-right  flex flex-initial flex-nowrap">
+          <p class="mr-3" id="notification"><i  class="fas fa-bell-on "></i></p>
           
-          <!-- Dashboard actions -->
-          <div class="sm:flex sm:justify-between sm:items-center mb-8">
-
-            <!-- Left: Avatars -->
-            <DashboardAvatars />
-
-            <!-- Right: Actions -->
-            <div class="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
-
-              <!-- Filter button -->
-              <FilterButton align="right" />
-
-              <!-- Datepicker built with flatpickr -->
-              <!-- <Datepicker align="right" /> -->
-
-              <!-- Add view button -->
-              <button class="btn bg-indigo-500 hover:bg-indigo-600 text-white">
-                  <svg class="w-4 h-4 fill-current opacity-50 flex-shrink-0" viewBox="0 0 16 16">
-                      <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z" />
-                  </svg>
-                  <span class="hidden xs:block ml-2">Add view</span>
-              </button>
-            </div>
+          <div class="bg-success mr-3" id="avatar">
 
           </div>
-
-          <!-- Cards -->
-          <div class="grid grid-cols-12 gap-6">
-
-            <!-- Line chart (Acme Plus) -->
-            <DashboardCard01 />
-            <!-- Line chart (Acme Advanced) -->
-            <DashboardCard02 />
-            <!-- Line chart (Acme Professional) -->
-            <DashboardCard03 />
-            <!-- Bar chart (Direct vs Indirect) -->
-            <DashboardCard04 />
-            <!-- Line chart (Real Time Value) -->
-            <DashboardCard05 />
-            <!-- Doughnut chart (Top Countries) -->
-            <DashboardCard06 />
-            <!-- Table (Top Channels) -->
-            <DashboardCard07 />
-            <!-- Line chart (Sales Over Time) -->
-            <DashboardCard08 />
-            <!-- Stacked bar chart (Sales VS Refunds) -->
-            <DashboardCard09 />
-            <!-- Card (Customers)  -->
-            <DashboardCard10 />
-            <!-- Card (Reasons for Refunds)   -->
-            <DashboardCard11 /> 
-            <!-- Card (Recent Activity) -->
-            <DashboardCard12 />
-            <!-- Card (Income/Expenses) -->
-            <!-- <DashboardCard13 /> -->
+          <p id="adminText" class="float-right ">Admin</p>
+          </div>
+        </div> -->
+        <div class="flex">
+          <input id="textInput" type="text" class="w-50  rounded py-1 bg-grey border border-info">
+          <div class=" ml-auto  flex flex-initial flex-nowrap">
+          <p class="mr-3" id="notification"><i  class="fas fa-bell-on "></i></p>
+          
+          <div class="bg-success mr-3" id="avatar">
 
           </div>
-
+          <p id="adminText" class="float-right ">Admin</p>
+          </div>
+          
         </div>
-      </main>
 
-      <Banner />
+        <div class="" id="showRoute">
+          <router-view></router-view>
+        </div>
 
-    </div> 
-
+      </section>
   </div>
 </template>
-
-<script>
-import { ref } from 'vue'
-import Sidebar from '../partials/Sidebar.vue'
-import Header from '../partials/Header.vue'
-import WelcomeBanner from '../partials/dashboard/WelcomeBanner.vue'
-import DashboardAvatars from '../partials/dashboard/DashboardAvatars.vue'
-import FilterButton from '../components/DropdownFilter.vue'
-// import Datepicker from '../components/Datepicker.vue'
-import DashboardCard01 from '../partials/dashboard/DashboardCard01.vue'
-// import DashboardCard02 from '../partials/dashboard/DashboardCard02.vue'
-// import DashboardCard03 from '../partials/dashboard/DashboardCard03.vue'
-// import DashboardCard04 from '../partials/dashboard/DashboardCard04.vue'
-// import DashboardCard05 from '../partials/dashboard/DashboardCard05.vue'
-// import DashboardCard06 from '../partials/dashboard/DashboardCard06.vue'
-// import DashboardCard07 from '../partials/dashboard/DashboardCard07.vue'
-// import DashboardCard08 from '../partials/dashboard/DashboardCard08.vue'
-// import DashboardCard09 from '../partials/dashboard/DashboardCard09.vue'
-// import DashboardCard10 from '../partials/dashboard/DashboardCard10.vue'
-// import DashboardCard11 from '../partials/dashboard/DashboardCard11.vue'
-// import DashboardCard12 from '../partials/dashboard/DashboardCard12.vue'
-// import DashboardCard13 from '../partials/dashboard/DashboardCard13.vue'
-import Banner from '../partials/Banner.vue'
-
-export default {
-  name: 'Dashboard',
-  components: {
-    Sidebar,
-    Header,
-    WelcomeBanner,
-    DashboardAvatars,
-    FilterButton,
-    // Datepicker,
-    DashboardCard01,
-    // DashboardCard02,
-    // DashboardCard03,
-    // DashboardCard04,
-    // DashboardCard05,
-    // DashboardCard06,
-    // DashboardCard07,
-    // DashboardCard08,
-    // DashboardCard09,
-    // DashboardCard10,
-    // DashboardCard11,
-    // DashboardCard12,
-    // DashboardCard13,
-    Banner,
-  },
-  setup() {
-
-    const sidebarOpen = ref(false)
-
-    return {
-      sidebarOpen,
-    }  
-  }
+<style  scoped>
+li{
+  list-style: none;
+  text-decoration: none;
 }
-</script>
+.sidebar{
+  top: 0px;
+  z-index: 1;
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #188f16;
+  transition: all .5s ease;
+}
+.sidebar header{
+  /* font-size: 28px; */
+  color: white;
+  margin-bottom: 30px;
+}
+.sidebar ul a{
+  display: block;
+  line-height: 79px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+label #btn, label #cancel{
+  position: absolute;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 32px;
+  color: red;
+  font-size: 35px;
+  /* padding: 6px 12px; */
+  transition: all .5s;
+}
+label #cancel{
+  left: -195px;
+  top: 32px;
+  font-size: 60px;
+  z-index: 1111;
+  padding: 4px;
+  color:red;
+  padding: 4px 9px;
+}
+#check{
+  display: none;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+section{
+  height: 100%;
+  margin-left: 90px;
+}
+#textInput{
+  margin-top: 11px;
+  border: none;
+}
+#textInput:focus{
+  outline: none;
+}
+#notification{
+  margin-top: 11px;
+}
+/* img{
+  border-radius: 50%;
+  width: 70px;
+} */
+#avatar{
+  border-radius: 30%;
+  margin-top: 11px;
+  width: 50px;
+}
+#adminText{
+  margin-top: 11px;
+}
+#showRoute{
+  margin-top:80px
+}
+
+
+</style>
