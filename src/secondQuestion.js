@@ -2,8 +2,8 @@ import {required} from 'vuelidate/lib/validators'
 export const secondQuestions = {
     data(){
         return{
-            attendPhysicalClassError:'',
-            readPhysicalBooksError:'',
+            attendPhysicalClassRef:'',
+            readPhysicalBooksRef:'',
             ReadPhysicalBooks:[
                 {
                     "id": "sd",
@@ -46,10 +46,10 @@ export const secondQuestions = {
     },
     validations:{
     
-    readPhysicalBooksError:{
+    readPhysicalBooksRef:{
         required:required
     },
-    attendPhysicalClassError:{
+    attendPhysicalClassRef:{
         required: required
     }
     
