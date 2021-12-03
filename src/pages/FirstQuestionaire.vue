@@ -157,7 +157,7 @@
             <ul class="-ml-8" style="list-style-type: none; " >
                 <p class="font-bold mb-2">If Yes, what method accessing information technology?</p>
                 <li v-for="device in devices" :key="device">
-                  <div>
+                  
                     <label v-bind:for="device.id">
 
                       <input class=""  type="checkbox" v-model="device.checked" v-bind:value="device.id" v-bind:id="device.id">
@@ -167,7 +167,7 @@
                       <span class="ml-2">{{ device.title }}</span> -->
                       
                     </label>
-                    </div>
+                   
                 </li>
             </ul>
           </div>
