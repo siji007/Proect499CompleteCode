@@ -7,7 +7,7 @@ export const firstQuestionMixin = {
           genderRef:'',
           classRef:'',
           
-          devicesRef: '',  
+          // devicesRef: '',  
           email: null,
           showSecond: false,
           showFirst: true,
@@ -101,9 +101,9 @@ export const firstQuestionMixin = {
         classRef:{
           required: required
         },
-        devicesRef:{
-          required:required
-        }
+        // devicesRef:{
+        //   required:required
+        // }
       },
       methods: {
         submit() {
