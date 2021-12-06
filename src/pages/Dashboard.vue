@@ -22,18 +22,6 @@
       </div>
 
       <section class="pr-5">
-        <!-- <div class="" style="">
-          <input id="textInput" type="text" class="w-50 rounded py-1 bg-grey border border-info">
-
-          <div class="float-right  flex flex-initial flex-nowrap">
-          <p class="mr-3" id="notification"><i  class="fas fa-bell-on "></i></p>
-          
-          <div class="bg-success mr-3" id="avatar">
-
-          </div>
-          <p id="adminText" class="float-right ">Admin</p>
-          </div>
-        </div> -->
         <div class="flex">
           <input id="textInput" type="text" class="w-50  rounded py-1 bg-grey border border-info">
           <div class=" ml-auto  flex flex-initial flex-nowrap">
@@ -44,13 +32,11 @@
           </div>
           <p id="adminText" class="float-right ">Admin</p>
           </div>
-          
         </div>
 
-        <div class="" id="showRoute">
+        <div class="" id="showRouted">
           <router-view></router-view>
         </div>
-
       </section>
   </div>
 </template>
@@ -148,7 +134,7 @@ section{
 #adminText{
   margin-top: 11px;
 }
-#showRoute{
+#showRouted{
   margin-top:80px
 }
 
