@@ -2,10 +2,10 @@ import {required, email} from 'vuelidate/lib/validators'
 export const firstQuestionMixin = {
     data() {
         return {
-          accessItYnRef:'',
-          ageRef:'',
-          genderRef:'',
-          classRef:'',
+          question4:'',
+          question1:'',
+          question2:'',
+          question3:'',
           
           // devicesRef: '',  
           email: null,
@@ -89,16 +89,16 @@ export const firstQuestionMixin = {
         email: {
           required,email
         },
-        accessItYnRef:{
+        question4:{
           required:required
         },
-        ageRef:{
+        question1:{
           required:required
         },
-        genderRef:{
+        question2:{
           required:required
         },
-        classRef:{
+        question3:{
           required: required
         },
         // devicesRef:{
