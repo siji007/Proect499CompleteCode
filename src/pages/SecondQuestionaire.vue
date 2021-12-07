@@ -16,40 +16,20 @@
             </p>
         </div>
 
-        <!-- <div class="p-4 mt-4">
-            <div class="flex justify-between">
-                <div>Student</div>
-                <div>Strongly Diasgree</div>
-                <div>Diasgree</div>
-                <div>Agree</div>
-                <div>Strongly Agree</div>
-            </div>
-        </div> -->
-
         <div class=" mt-4">
-
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
                     <p class="font-bold mb-2">Get distracted in class when they bring their phones to class</p>
                     <li v-for="distracted in GetDistractedWithPhones" :key="distracted">
-                        <!-- <div class="input" :class="{invalid: $v.question5.$error}"> -->
                         <label>
                             <input v-model="question5" v-bind:value="distracted.id" @input="$v.question5.$touch()" class="" name="question5" id="question5" type="radio" >
                             <span class="ml-2">{{ distracted.title }}</span>
                         </label>
-                        <!-- </div> -->
                     </li>
                     <p class="text-danger" v-if="!$v.question5.required">Please select a option</p>
                 </ul>
             </div>
 
-            <!-- <div class="form-group p-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Get distracted in class when they bring their phones to class</label> <br>
-                <input type="radio" required name="question6" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question6" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question6" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question6" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
             
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -64,14 +44,6 @@
                 </ul>
             </div>
 
-            <!-- <div class="form-group p-4 mb-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Get distracted by information technology media after school</label> <br>
-                <input type="radio" required name="question7" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question7" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question7" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question7" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
-
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
                     <p class="font-bold mb-2">Visit game centers or play games more than reading their books.</p>
@@ -85,13 +57,6 @@
                 </ul>
             </div>
             
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Visit game centers or play games more than reading their books.</label> <br>
-                <input type="radio" required name="question8" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question8" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question8" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question8" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
 
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -106,13 +71,6 @@
                 </ul>
             </div>
             
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are more active on social media than their academics.</label> <br>
-                <input type="radio" required name="question9" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question9" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question9" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question9" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
 
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -126,14 +84,6 @@
                     <p class="text-danger" v-if="!$v.question9.required">Please select a option</p>
                 </ul>
             </div>
-            
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are exposed to pornographic information which affects their academics negatively.</label> <br>
-                <input type="radio" required name="question10" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question10" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question10" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question10" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
 
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -148,14 +98,6 @@
                 </ul>
             </div>
 
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are addicted to television after schools hours.</label> <br>
-                <input type="radio" required name="question11" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question11" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question11" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question11" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
-
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
                     <p class="font-bold mb-2">Use mobile phones for examination malpractice.</p>
@@ -168,16 +110,7 @@
                     <p class="text-danger" v-if="!$v.question11.required">Please select a option</p>
                 </ul>
             </div>
-            
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Use mobile phones for examination malpractice.</label> <br>
-                <input type="radio" required name="question12" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question12" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question12" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question12" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
 
-            
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
                     <p class="font-bold mb-2">Are distracted by other mobile or computer features when attending online classes.</p>
@@ -190,13 +123,6 @@
                     <p class="text-danger" v-if="!$v.question12.required">Please select a option</p>
                 </ul>
             </div>
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are distracted by other mobile or computer features when attending online classes.</label> <br>
-                <input type="radio" required name="question13" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question13" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question13" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question13" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
 
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -210,14 +136,6 @@
                     <p class="text-danger" v-if="!$v.question13.required">Please select a option</p>
                 </ul>
             </div>
-            
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are addicted to movies or shows on their devices.</label> <br>
-                <input type="radio" required name="question14" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question14" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question14" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question14" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
 
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -232,14 +150,6 @@
                 </ul>
             </div>
 
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are distracted by listening to music in class.</label> <br>
-                <input type="radio" required name="question15" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question15" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question15" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question15" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
-
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
                     <p class="font-bold mb-2">Are distracted by listening to music in class.</p>
@@ -253,14 +163,6 @@
                 </ul>
             </div>
 
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Use the internet to download unnecessary information.</label> <br>
-                <input type="radio" required name="question16" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question16" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question16" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question16" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
-
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
                     <p class="font-bold mb-2">Are exposed to moral corruption through the internet</p>
@@ -273,13 +175,6 @@
                     <p class="text-danger" v-if="!$v.question16.required">Please select a option</p>
                 </ul>
             </div>
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are exposed to moral corruption through the internet.</label> <br>
-                <input type="radio" required name="question17" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question17" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question17" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question17" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
 
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -294,14 +189,6 @@
                 </ul>
             </div>
 
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are exposed to gambling through technology and affects their education.</label> <br>
-                <input type="radio" required name="question18" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question18" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question18" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question18" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
-
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
                     <p class="font-bold mb-2">Are exposed to internet scam which affects their education.</p>
@@ -314,14 +201,6 @@
                     <p class="text-danger" v-if="!$v.question18.required">Please select a option</p>
                 </ul>
             </div>
-            
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are exposed to internet scam which affects their education.</label> <br>
-                <input type="radio" required name="question19" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question19" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question19" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question19" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
 
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -335,13 +214,6 @@
                     <p class="text-danger" v-if="!$v.question19.required">Please select a option</p>
                 </ul>
             </div>
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Have become lazy in their academics since they get most information online.</label> <br>
-                <input type="radio" required name="question20" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question20" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question20" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question20" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
             
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -356,13 +228,6 @@
                 </ul>
             </div>
             
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are misguided academically due to wrong information online.</label> <br>
-                <input type="radio" required name="question21" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question21" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question21" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question21" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
                     <p class="font-bold mb-2">Lose the habit to write due to excessive use of laptops and mobile phones.</p>
@@ -375,14 +240,6 @@
                     <p class="text-danger" v-if="!$v.question21.required">Please select a option</p>
                 </ul>
             </div>
-            
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Lose the habit to write due to excessive use of laptops and mobile phones.</label> <br>
-                <input type="radio" required name="question22" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question22" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question22" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question22" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
 
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
@@ -396,14 +253,6 @@
                     <p class="text-danger" v-if="!$v.question22.required">Please select a option</p>
                 </ul>
             </div>
-            <!-- <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
-                <label for="" class="text-large font-bold">Are more likely to loose their data on laptops or mobile phones than having physical books.</label> <br>
-                <input type="radio" required name="question23" id="sd"> <span class="ml-2">Strongly Disagree</span><br>
-                <input type="radio" required name="question23" id="d"> <span class="ml-2">Disagree</span><br>
-                <input type="radio" required name="question23" id="a"> <span class="ml-2">Agree</span><br>
-                <input type="radio" required name="question23" id="a"> <span class="ml-2">Strong Agree</span><br>
-            </div> -->
-
 
             <div class="form-group p-4 mt-4 rounded-lg" style="background-color:#8FE58E;">
                 <ul class="-ml-8" style="list-style-type: none; " >
