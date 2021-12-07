@@ -227,7 +227,6 @@
                     v-bind:id="device.id"
                   />
                   <span class="ml-2">{{ device.title }}</span>
-
                   <!-- <input class="" @input="$v.devicesRef.$touch()"  type="checkbox" v-model="devicesRef" v-bind:value="device.id" v-bind:id="device.id">
                       <span class="ml-2">{{ device.title }}</span> -->
                 </label>
