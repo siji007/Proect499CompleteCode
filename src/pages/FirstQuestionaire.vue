@@ -60,22 +60,22 @@
           >
             <ul class="-ml-8" style="list-style-type: none">
               <p class="font-bold mb-2">Age</p>
-              <li v-for="age in Ages" :key="age">
+              <li v-for="myage in Ages" :key="myage">
                 <label>
                   <input
-                    v-model="question1"
-                    @input="$v.question1.$touch()"
-                    name="question1"
+                    v-model="age"
+                    @input="$v.age.$touch()"
+                    name="age"  
                     max="1"
                     class=""
                     type="radio"
-                    v-bind:value="age.id"
-                    id="question1"
+                    v-bind:value="myage.id"
+                    id="age"
                   />
-                  <span class="ml-2">{{ age.title }}</span>
+                  <span class="ml-2">{{ myage.title }}</span>
                 </label>
               </li>
-              <p class="text-danger font-serif" v-if="!$v.question1.required">
+              <p class="text-danger font-serif" v-if="!$v.age.required">
                 Please select a option
               </p>
             </ul>
@@ -95,21 +95,21 @@
           >
             <ul class="-ml-8" style="list-style-type: none">
               <p class="font-bold mb-2">Gender</p>
-              <li v-for="gender in Genders" :key="gender">
+              <li v-for="gend in Genders" :key="gend">
                 <label v-bind:for="gender.id">
                   <input
-                    v-model="question2"
-                    @input="$v.question2.$touch()"
-                    name="question2"
+                    v-model="gender"
+                    @input="$v.gender.$touch()"
+                    name="gender"
                     class=""
                     type="radio"
-                    v-bind:value="gender.id"
-                    id="question2"
+                    v-bind:value="gend.id"
+                    id="gender"
                   />
-                  <span class="ml-2">{{ gender.title }}</span>
+                  <span class="ml-2">{{ gend.title }}</span>
                 </label>
               </li>
-              <p class="text-danger font-serif" v-if="!$v.question2.required">
+              <p class="text-danger font-serif" v-if="!$v.gender.required">
                 Please select a option
               </p>
             </ul>
@@ -128,10 +128,10 @@
               <li v-for="classes in seniorClass" :key="classes">
                 <label v-bind:for="classes.id">
                   <input
-                    v-model="question3"
-                    @input="$v.question3.$touch()"
+                    v-model="clas"
+                    @input="$v.clas.$touch()"
                     class=""
-                    name="question3"
+                    name="clas"
                     type="radio"
                     v-bind:value="classes.id"
                     v-bind:id="classes.id"
@@ -140,7 +140,7 @@
                 </label>
               </li>
             </ul>
-            <p class="text-danger font-serif" v-if="!$v.question3.required">
+            <p class="text-danger font-serif" v-if="!$v.clas.required">
               Please select a option
             </p>
             <!-- <label for="" class="text-large font-bold">Class</label> <br />
