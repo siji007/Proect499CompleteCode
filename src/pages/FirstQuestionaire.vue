@@ -79,14 +79,6 @@
                 Please select a option
               </p>
             </ul>
-
-            <!-- <label for="" class="text-large font-bold">Age</label> <br />
-            <input type="radio" required name="age" id="l12" />
-            <span class="ml-2">Less than 12</span><br />
-            <input type="radio" required name="age" id="b1214" />
-            <span class="ml-2">12 - 14 years</span><br />
-            <input type="radio" required name="age" id="m14" />
-            <span class="ml-2">More than 14 years</span> -->
           </div>
 
           <div
@@ -113,44 +105,62 @@
                 Please select a option
               </p>
             </ul>
-            <!-- <label for="" class="text-large font-bold">Gender</label> <br />
-            <input type="radio" required name="gender" id="male" />
-            <span class="ml-2">Male</span><br />
-            <input type="radio" required name="gender" id="female" />
-            <span class="ml-2">Female</span><br /> -->
           </div>
+
           <div
-            class="form-group mt-4 p-4 rounded-lg"
+            class="form-group p-4 rounded-lg"
             style="background-color: #8fe58e"
           >
             <ul class="-ml-8" style="list-style-type: none">
               <p class="font-bold mb-2">Class</p>
-              <li v-for="classes in seniorClass" :key="classes">
-                <label v-bind:for="classes.id">
+              <li v-for="classes in SeniorClass" :key="classes">
+                <label>
                   <input
                     v-model="clas"
                     @input="$v.clas.$touch()"
+                    name="classes"  
+                    max="1"
                     class=""
-                    name="clas"
                     type="radio"
                     v-bind:value="classes.id"
-                    v-bind:id="classes.id"
+                    id="classes"
                   />
                   <span class="ml-2">{{ classes.title }}</span>
                 </label>
               </li>
+              <p class="text-danger font-serif" v-if="!$v.clas.required">
+                Please select a option
+              </p>
             </ul>
-            <p class="text-danger font-serif" v-if="!$v.clas.required">
-              Please select a option
-            </p>
-            <!-- <label for="" class="text-large font-bold">Class</label> <br />
-            <input type="radio" required name="class" id="ss1" />
-            <span class="ml-2">SS1</span><br />
-            <input type="radio" required name="class" id="ss2" />
-            <span class="ml-2">SS2</span><br />
-            <input type="radio" required name="class" id="ss3" />
-            <span class="ml-2">SS3</span><br /> -->
           </div>
+
+          <div
+            class="form-group p-4 rounded-lg"
+            style="background-color: #8fe58e"
+          >
+            <ul class="-ml-8" style="list-style-type: none">
+              <p class="font-bold mb-2">Location</p>
+              <li v-for="locate in Location" :key="locate">
+                <label>
+                  <input
+                    v-model="location"
+                    @input="$v.location.$touch()"
+                    name="location"  
+                    max="1"
+                    class=""
+                    type="radio"
+                    v-bind:value="locate.id"
+                    id="location"
+                  />
+                  <span class="ml-2">{{ locate.title }}</span>
+                </label>
+              </li>
+              <p class="text-danger font-serif" v-if="!$v.location.required">
+                Please select a option
+              </p>
+            </ul>
+          </div>
+
 
           <div
             class="form-group mt-4 p-4 rounded-lg"
@@ -163,14 +173,14 @@
               <li v-for="access in AccessIt" :key="access">
                 <div
                   class="input"
-                  :class="{ invalid: $v.question4.$error }"
+                  :class="{ invalid: $v.question1.$error }"
                 >
                   <label v-bind:for="access.id">
                     <input
-                      v-model="question4"
-                      @input="$v.question4.$touch()"
+                      v-model="question1"
+                      @input="$v.question1.$touch()"
                       class=""
-                      name="question4"
+                      name="question1"
                       type="radio"
                       v-bind:value="access.id"
                       v-bind:id="access.id"
@@ -181,37 +191,18 @@
               </li>
               <p
                 class="text-danger font-serif"
-                v-if="!$v.question4.required"
+                v-if="!$v.question1.required"
               >
                 Please select a option
               </p>
             </ul>
-            <!-- <label for="" class="text-large font-bold"
-              >Do you have access to information technology?</label
-            >
-            <br />
-            <input type="radio" required name="access" id="yes" />
-            <span class="ml-2">Yes</span><br />
-            <input type="radio" required name="access" id="no" />
-            <span class="ml-2">No</span><br /> -->
           </div>
           <div
             id="divf"
             class="form-group mt-4 p-4 rounded-lg pb-8"
             style="background-color: #8fe58e"
           >
-            <!-- <label for="" class="text-large font-bold"
-              >If Yes, what method accessing information technology?</label
-            >
-            <br />
-            <input type="radio" required name="method" id="television" />
-            <span  class="ml-2">Television</span><br />
-            <input type="radio" required name="method" id="mobilePhone" />
-            <span class="ml-2">Mobile phone</span><br />
-            <input type="radio" required name="method" id="computer" />
-            <span class="ml-2">Computer</span><br />
-            <input type="radio" required name="method" id="videoGame" />
-            <span class="ml-2">Video game</span><br /> -->
+  
             <ul class="-ml-8" style="list-style-type: none">
               <p class="font-bold mb-2">
                 If Yes, what method accessing information technology?
@@ -222,7 +213,7 @@
                     class=""
                     type="checkbox"
                     v-model="device.checked"
-                    name="question5[]"
+                    name="question2[]"
                     v-bind:value="device.id"
                     v-bind:id="device.id"
                   />
@@ -307,10 +298,4 @@ export default {
 #divf {
   background-color: #8fe58e;
 }
-/* .input.invalid label {
-    color: red;
-} */
-/* .input.invalid input {
-    border: 1px solid red;
-} */
 </style>

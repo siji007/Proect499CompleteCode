@@ -2,10 +2,12 @@ import { required, email } from 'vuelidate/lib/validators'
 export const firstQuestionMixin = {
   data() {
     return {
-      question4: '',
+      question1: '',
+      question2: '',
       age: '',
       gender: '',
       clas: '',
+      location: '',
 
       // devicesRef: '',  
       email: null,
@@ -46,7 +48,7 @@ export const firstQuestionMixin = {
           "title": "No"
         },
       ],
-      seniorClas: [
+      SeniorClass: [
         {
           "id": "ss1",
           "title": "SS1"
@@ -60,6 +62,17 @@ export const firstQuestionMixin = {
           "title": "SS3"
         },
       ],
+      Location : [
+        {
+          "id": "rural",
+          "title": "Rural"
+        },
+        {
+          "id": "urban",
+          "title": "Urban"
+        },
+      ],
+
       devices: [
 
         {
@@ -91,7 +104,10 @@ export const firstQuestionMixin = {
     email: {
       required, email
     },
-    question4: {
+    question1: {
+      required: required
+    },
+    question2: {
       required: required
     },
     age: {
@@ -103,9 +119,10 @@ export const firstQuestionMixin = {
     clas: {
       required: required
     },
-    // devicesRef:{
-    //   required:required
-    // }
+    location:{
+      required: required
+    }
+  
   },
   methods: {
     submit() {

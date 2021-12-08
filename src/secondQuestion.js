@@ -2,6 +2,8 @@ import {required} from 'vuelidate/lib/validators'
 export const secondQuestions = {
     data(){
         return{
+            question3 : '',
+            question4 : '',
             question5 : '',
             question6 : '',
             question7 : '',
@@ -20,8 +22,7 @@ export const secondQuestions = {
             question20 : '',
             question21 : '',
             question22 : '',
-            question23 : '',
-            question24 : '',
+            
             
 
 
@@ -410,6 +411,12 @@ export const secondQuestions = {
         }
     },
     validations:{
+    question3:{
+        required:required
+    },
+    question4:{
+        required:required
+    },
     question5:{
         required:required
     },
@@ -464,19 +471,7 @@ export const secondQuestions = {
     question22:{
         required:required
     },
-    question23:{
-        required:required
-    },
-    question24:{
-        required:required
-    },
-    
-    // readPhysicalBooksRef:{
-    //     required:required
-    // },
-    // attendPhysicalClassRef:{
-    //     required: required
-    // }
+
     
   },
     methods:{
