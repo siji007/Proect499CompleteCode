@@ -8,8 +8,6 @@ export const firstQuestionMixin = {
       gender: '',
       clas: '',
       location: '',
-
-      // devicesRef: '',  
       email: null,
       showSecond: false,
       showFirst: true,

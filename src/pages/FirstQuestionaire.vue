@@ -60,7 +60,7 @@
           >
             <ul class="-ml-8" style="list-style-type: none">
               <p class="font-bold mb-2">Age</p>
-              <li v-for="myage in Ages" :key="myage">
+              <li v-for="myage in Ages" :key="myage.id">
                 <label>
                   <input
                     v-model="age"
@@ -87,7 +87,7 @@
           >
             <ul class="-ml-8" style="list-style-type: none">
               <p class="font-bold mb-2">Gender</p>
-              <li v-for="gend in Genders" :key="gend">
+              <li v-for="gend in Genders" :key="gend.id">
                 <label v-bind:for="gender.id">
                   <input
                     v-model="gender"
@@ -113,7 +113,7 @@
           >
             <ul class="-ml-8" style="list-style-type: none">
               <p class="font-bold mb-2">Class</p>
-              <li v-for="classes in SeniorClass" :key="classes">
+              <li v-for="classes in SeniorClass" :key="classes.id">
                 <label>
                   <input
                     v-model="clas"
@@ -140,7 +140,7 @@
           >
             <ul class="-ml-8" style="list-style-type: none">
               <p class="font-bold mb-2">Location</p>
-              <li v-for="locate in Location" :key="locate">
+              <li v-for="locate in Location" :key="locate.id">
                 <label>
                   <input
                     v-model="location"
@@ -170,7 +170,7 @@
               <p class="font-bold mb-2">
                 Do you have access to information technology?
               </p>
-              <li v-for="access in AccessIt" :key="access">
+              <li v-for="access in AccessIt" :key="access.id">
                 <div
                   class="input"
                   :class="{ invalid: $v.question1.$error }"
@@ -207,7 +207,7 @@
               <p class="font-bold mb-2">
                 If Yes, what method accessing information technology?
               </p>
-              <li v-for="device in devices" :key="device">
+              <li v-for="device in devices" :key="device.id">
                 <label v-bind:for="device.id">
                   <input
                     class=""
@@ -233,7 +233,7 @@
         <div class="mt-4 mb-4">
           <button
             id="next"
-            :disabled="$v.$invalid"
+            
             class="btn"
             @click="display"
             v-show="showFirst"
@@ -257,7 +257,7 @@
             class="btn ml-4"
             id="submitt"
             type="submit"
-            :disabled="$v.$invalid"
+            
             style="background-color: #8fe58e"
           >
             Submit
@@ -281,16 +281,49 @@ export default {
     SecondQuestionaire,
   },
   methods: {
-    onSubmit() {
-      // const formData = new FormData()
-      // formData.append('email', this.email)
-      // axios.post('http://127.0.0.1:8000/api/store').then((result) => {
-      //   console.log(result)
-      // }).catch((err) => {
-      //   console.log(err)
-      // });
-      console.log(document.getElementById('email').value)
-    },
+    onSubmit: function () {
+    const formData = new FormData();
+    formData.append("email", this.email);
+    formData.append("age", this.age);
+    formData.append("gender", this.gender);
+    formData.append("classes", this.clas);
+    // formData.append('',)
+    formData.append("location", this.location);
+    formData.append("question1", this.question1);
+    formData.append("question2", this.question2);
+    formData.append("question3", this.question3);
+    formData.append("question4", this.question4);
+    formData.append("question5", this.question5);
+    formData.append("question6", this.question6);
+    formData.append("question7", this.question7);
+    formData.append("question8", this.question8);
+    formData.append("question9", this.question9);
+    formData.append("question10", this.question10);
+    formData.append("question11", this.question11);
+    formData.append("question12", this.question12);
+    formData.append("question13", this.question13);
+    formData.append("question14", this.question14);
+    formData.append("question15", this.question15);
+    formData.append("question16", this.question16);
+    formData.append("question17", this.question17);
+    formData.append("question18", this.question18);
+    formData.append("question19", this.question19);
+    formData.append("question20", this.question20);
+    formData.append("question21", this.question21);
+    formData.append("question22", this.question22);
+    // axios.post('http://127.0.0.1:8000/api/store').then((result) => {
+
+    //   console.log(result)
+    // }).catch((err) => {
+    //   console.log(err)
+    // });
+    // console.log('email').value)
+    // console.log(formData);
+    // for (let key of formData.keys()) {
+    //   console.log(key, formData.get(key))
+    // }
+    console.log('Anwser:',this.question3);
+}
   },
 };
 </script>

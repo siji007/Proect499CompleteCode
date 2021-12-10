@@ -1,5 +1,5 @@
 import {required} from 'vuelidate/lib/validators'
-export const secondQuestions = {
+export const secondQuestionMixin = {
     data(){
         return{
             question3 : '',
@@ -22,9 +22,6 @@ export const secondQuestions = {
             question20 : '',
             question21 : '',
             question22 : '',
-            
-            
-
 
             GetDistractedWithPhones:[
                 {
@@ -40,7 +37,7 @@ export const secondQuestions = {
                     "title": "Agree"
                 },
                 {
-                    "id": "ae",
+                    "id": "sa",
                     "title": "Strongly Agree"
                 },
             ],
