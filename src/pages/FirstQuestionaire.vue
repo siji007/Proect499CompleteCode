@@ -1502,7 +1502,7 @@ export default {
         formData.append("question1", this.$data.question1);
         formData.append("question2", question2);
         formData.append("question3", this.$data.question3);
-
+//test
         formData.append("question4", this.$data.question4);
         formData.append("question5", this.$data.question5);
         formData.append("question6", this.$data.question6);
