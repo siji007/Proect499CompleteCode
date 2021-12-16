@@ -16,18 +16,23 @@ import '@fortawesome/fontawesome-free/js/all.js'
 import {routes} from './route'
 import VueRouter from 'vue-router'
 
-// import './css/style.scss'
 
+// import {store} from './store/store'
+// import './css/style.scss'
+// Vue.use(store);
 Vue.use(VueRouter)
 Vue.use(Vuelidate)
 Vue.config.productionTip = false
 
 const router = new VueRouter({
     routes,
+    // store,
     mode: 'history'
 })
+
 new Vue({
     render: h => h(App),
-    router
+    router,
+    // store
 
 }).$mount('#app')
