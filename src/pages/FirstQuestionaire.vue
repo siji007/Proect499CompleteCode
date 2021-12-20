@@ -283,7 +283,7 @@
                 </ul>
               </div>
 
-              <!-- <div
+              <div
                 class="form-group p-4 mt-4 rounded-lg"
                 style="background-color: #8fe58e"
               >
@@ -843,7 +843,7 @@
                     Please select a option
                   </p>
                 </ul>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -1493,50 +1493,54 @@ export default {
         if (element.checked) question2.push(element.id);
       });
 
-        const formData = new FormData();
-        formData.append("email", this.$data.myemail);
-        formData.append("age", this.$data.age);
-        formData.append("gender", this.$data.gender);
-        formData.append("class", this.$data.clas);
-        formData.append("location", this.$data.location);
-        formData.append("question1", this.$data.question1);
-        formData.append("question2", question2);
-        formData.append("question3", this.$data.question3);
-//test
-        formData.append("question4", this.$data.question4);
-        formData.append("question5", this.$data.question5);
-        formData.append("question6", this.$data.question6);
-        formData.append("question7", this.$data.question7);
-        formData.append("question8", this.$data.question8);
-        formData.append("question9", this.$data.question9);
-        formData.append("question10", this.$data.question10);
-        formData.append("question11", this.$data.question11);
-        formData.append("question12", this.$data.question12);
-        formData.append("question13", this.$data.question13);
-        formData.append("question14", this.$data.question14);
-        formData.append("question15", this.$data.question15);
-        formData.append("question16", this.$data.question16);
-        formData.append("question17", this.$data.question17);
-        formData.append("question18", this.$data.question18);
-        formData.append("question19", this.$data.question19);
-        formData.append("question20", this.$data.question20);
-        formData.append("question21", this.$data.question21);
-        formData.append("question22", this.$data.question22);
+      const formData = new FormData();
+      formData.append("email", this.$data.myemail);
+      formData.append("age", this.$data.age);
+      formData.append("gender", this.$data.gender);
+      formData.append("class", this.$data.clas);
+      formData.append("location", this.$data.location);
+      formData.append("question1", this.$data.question1);
+      formData.append("question2", question2);
+      formData.append("question3", this.$data.question3);
+      //test
+      formData.append("question4", this.$data.question4);
+      formData.append("question5", this.$data.question5);
+      formData.append("question6", this.$data.question6);
+      formData.append("question7", this.$data.question7);
+      formData.append("question8", this.$data.question8);
+      formData.append("question9", this.$data.question9);
+      formData.append("question10", this.$data.question10);
+      formData.append("question11", this.$data.question11);
+      formData.append("question12", this.$data.question12);
+      formData.append("question13", this.$data.question13);
+      formData.append("question14", this.$data.question14);
+      formData.append("question15", this.$data.question15);
+      formData.append("question16", this.$data.question16);
+      formData.append("question17", this.$data.question17);
+      formData.append("question18", this.$data.question18);
+      formData.append("question19", this.$data.question19);
+      formData.append("question20", this.$data.question20);
+      formData.append("question21", this.$data.question21);
+      formData.append("question22", this.$data.question22);
 
+      axios.get("http://127.0.0.1:8000/sanctum/csrf-cookie").then(() => {
         axios
           .post("http://127.0.0.1:8000/api/store", formData)
           .then((result) => {
             console.log(result);
+            alert('Response received!')
           })
           .catch((err) => {
             console.log(err);
           });
+      });
 
-        for (let key of formData.keys()) {
-          console.log(key, formData.get(key));
-        }
+      for (let key of formData.keys()) {
+        console.log(key, formData.get(key));
+      }
     },
   },
+
 };
 </script>
 <style scoped>
