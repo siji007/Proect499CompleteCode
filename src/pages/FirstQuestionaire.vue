@@ -1528,7 +1528,8 @@ export default {
           .post("http://127.0.0.1:8000/api/store", formData)
           .then((result) => {
             console.log(result);
-            alert('Response received!')
+            alert('Thank you for your response!');
+            this.$router.push('/') 
           })
           .catch((err) => {
             console.log(err);
