@@ -14,59 +14,59 @@ export const firstQuestionMixin = {
       submitButton: false,
       Ages: [
         {
-          "id": "l12",
+          "id": "Less than 12",
           "title": "Less than 12"
         },
         {
-          "id": "b1214",
+          "id": "12 - 14 years",
           "title": "12 - 14 years"
         },
         {
-          "id": "m14",
+          "id": "More than 14 years",
           "title": "More than 14 years"
         }
       ],
       Genders: [
         {
-          "id": "male",
+          "id": "Male",
           "title": "Male"
         },
         {
-          "id": "female",
+          "id": "Female",
           "title": "Female"
         },
       ],
       AccessIt: [
         {
-          "id": "yes",
+          "id": "Yes",
           "title": "Yes"
         },
         {
-          "id": "no",
+          "id": "No",
           "title": "No"
         },
       ],
       SeniorClass: [
         {
-          "id": "ss1",
+          "id": "SSS 1",
           "title": "SS1"
         },
         {
-          "id": "ss2",
+          "id": "SSS 2",
           "title": "SS2"
         },
         {
-          "id": "ss3",
+          "id": "SSS 3",
           "title": "SS3"
         },
       ],
       Location : [
         {
-          "id": "rural",
+          "id": "Rural",
           "title": "Rural"
         },
         {
-          "id": "urban",
+          "id": "Urban",
           "title": "Urban"
         },
       ],
@@ -74,22 +74,22 @@ export const firstQuestionMixin = {
       devices: [
 
         {
-          "id": "computer",
+          "id": "Computer",
           "title": "Computer",
           "checked": true
         },
         {
-          "id": "television",
+          "id": "Television",
           "title": "Television",
           "checked": false
         },
         {
-          "id": "mobilePhone",
+          "id": "Mobile phone",
           "title": "Mobile Phone",
           "checked": false
         },
         {
-          "id": "videoGame",
+          "id": "Video game",
           "title": "Video Game",
           "checked": false
         },

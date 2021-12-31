@@ -928,81 +928,81 @@ export default {
       submitButton: false,
       Ages: [
         {
-          id: "l12",
+          id: "Less than 12",
           title: "Less than 12",
         },
         {
-          id: "b1214",
+          id: "12 - 14 years",
           title: "12 - 14 years",
         },
         {
-          id: "m14",
+          id: "More than 14 years",
           title: "More than 14 years",
         },
       ],
       Genders: [
         {
-          id: "male",
+          id: "Male",
           title: "Male",
         },
         {
-          id: "female",
+          id: "Female",
           title: "Female",
         },
       ],
       AccessIt: [
         {
-          id: "yes",
+          id: "Yes",
           title: "Yes",
         },
         {
-          id: "no",
+          id: "No",
           title: "No",
         },
       ],
       SeniorClass: [
         {
-          id: "ss1",
+          id: "SSS 1",
           title: "SS1",
         },
         {
-          id: "ss2",
+          id: "SSS 2",
           title: "SS2",
         },
         {
-          id: "ss3",
+          id: "SSS 3",
           title: "SS3",
         },
       ],
       Location: [
         {
-          id: "rural",
+          id: "Rural",
           title: "Rural",
         },
         {
-          id: "urban",
+          id: "Urban",
           title: "Urban",
         },
       ],
 
       devices: [
         {
-          id: "computer",
+          id: "Computer",
           title: "Computer",
           checked: true,
         },
         {
-          id: "television",
+          id: "Television",
           title: "Television",
           checked: false,
         },
         {
-          id: "mobilePhone",
+          id: "Mobile phone",
           title: "Mobile Phone",
           checked: false,
         },
         {
-          id: "videoGame",
+          id: "Video game",
           title: "Video Game",
           checked: false,
         },
@@ -1010,380 +1010,380 @@ export default {
 
       GetDistractedWithPhones: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       GetDistractedByItAfterSchool: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       PlayGames: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       SocialMedia: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       Pornographic: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       AddictedToTelevesion: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       PhoneExamMalpractices: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       DistractedComputerFeatures: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "trongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       AddictedToMovies: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       DistractedByMovies: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       DownloadUnecessaryInfo: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       MoralCorruption: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       Gambling: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       InternetScam: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       LazyInAcademics: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       MisguidedAcademically: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       ExcessiveUseOfLaptops: [
         {
-          id: "sd",
+          id: "trongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       LoseDataOnLaptop: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       AttendPhysicalClass: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
 
       ReadPhysicalBooks: [
         {
-          id: "sd",
+          id: "Strongly Disagree",
           title: "Strongly Disagree",
         },
         {
-          id: "de",
+          id: "Disagree",
           title: "Disagree",
         },
         {
-          id: "ae",
+          id: "Agree",
           title: "Agree",
         },
         {
-          id: "sa",
+          id: "Strongly Agree",
           title: "Strongly Agree",
         },
       ],
